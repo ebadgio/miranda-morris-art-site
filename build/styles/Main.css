@@ -1,1 +1,38 @@
-/*Add your CSS styling here*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+.page-wrapper {
+    min-height: 200px;
+    padding-top: 80px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

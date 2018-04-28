@@ -4,7 +4,8 @@
   "description": "A gallery website displaying work by Miranda Morris",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack",
+    "dev": "nodemon Server.js",
+    "build": "webpack",
     "prod": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,8 +24,13 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "history": "^4.7.2",
+    "nodemon": "^1.17.3",
+    "path": "^0.12.7",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
     "webpack": "^2.7.0",
     "webpack-merge": "^4.1.2"
   }
