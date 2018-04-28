@@ -1,0 +1,31 @@
+{
+  "name": "miranda-morris-art-site",
+  "version": "1.0.0",
+  "description": "A gallery website displaying work by Miranda Morris",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack",
+    "prod": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebadgio/miranda-morris-art-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebadgio/miranda-morris-art-site/issues"
+  },
+  "homepage": "https://github.com/ebadgio/miranda-morris-art-site#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "webpack": "^2.7.0",
+    "webpack-merge": "^4.1.2"
+  }
+}
