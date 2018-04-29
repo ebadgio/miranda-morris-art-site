@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Videos from "./pages/Videos";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Bottom from "./components/Bottom";
 
 export const history = createBrowserHistory();
 
@@ -38,6 +39,7 @@ class App extends React.Component {
                     <Route path="/about" render={() => <About />}/>
                     <Route path="/contact" render={() => <Contact />}/>
                 </Switch>
+                <Bottom />
             </div>
         );
     }

@@ -2,6 +2,7 @@
     height: 55px;
     background: #fff;
     position: fixed;
+    z-index: 1;
 }
 
 .nav-item {
@@ -46,34 +47,42 @@
     background-image: url(https://s3.us-east-2.amazonaws.com/mirandamorrisart/Slideshow+Landscape+Witch+Doctor.jpg);
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 900px) {
+    .photo-wrapper {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 900px) {
     .photo-wrapper {
         width: 25%;
     }
 }
 
-@media only screen and (min-width: 750px) and (max-width: 850px) {
+@media only screen and (min-width: 400px) and (max-width: 750px){
     .photo-wrapper {
-        width: 33%;
+        width: 40%;
     }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 750px){
-    .photo-wrapper {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 400px){
     .photo-wrapper {
         width: 100%;
     }
 }
 
 .photo-wrapper {
-    background: #e1bee7;
-    padding: 0 15px 30px 15px;
-    height: 200px;
+    /*background: #e1bee7;*/
+    margin: 0 15px 30px 15px;
+    height: fit-content;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-img {
@@ -81,10 +90,41 @@
 
 }
 
+.photo-shadow {
+    width: -webkit-fill-available;
+    height: 110%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 15%;
+    padding-left: 5%;
+    /* top: 0; */
+    /* bottom: 30px; */
+    /* left: 15px; */
+    /* right: 15px; */
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+
+}
+
+.photo-shadow:hover {
+    opacity: 1;
+}
+
+.photo-info {
+    font-size: 14px;
+    margin: 10px 5px;
+}
+
 .deck-wrapper {
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
+    min-height: 700px;
 }
 
 .menu-wrapper {
@@ -96,16 +136,37 @@
 }
 
 .menu-item {
-    height: 100%;
+    height: 25px;
     background: #fff;
-    color: #424242;
-    font-size: 14px;
-    padding: 0 10px;
+    color: #9e9e9e;
+    font-size: 12px;
     -webkit-transition: color .35s ease;
     transition: color .35s ease;
     cursor: pointer;
+    margin: 0 15px;
+}
+
+.active {
+
+    color: #212121;
+    border-bottom: 1px solid;
+
 }
 
 .menu-item:hover {
-    color: #b388ff;
+    color: #212121;
+}
+
+
+.bottom {
+    background: #bdbdbd;
+    height: 40px;
+    margin-top: 60px;
+
+}
+
+.end-text {
+    color: #fff;
+    font-size: 12px;
+    margin: 0 20px;
 }

@@ -125,13 +125,25 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reprieve1.jpeg"
         },
         {
-            title: "",
-            size: "",
+            title: "Reprieve",
+            size: "Mixed Media, Gold Leaf | 2018 ",
             extra: "",
-            src: ""
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reprieve2.jpeg"
+        },
+        {
+            title: "Swiss",
+            size: "Wood | 2017",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Swiss+Wood.jpg"
+        },
+        {
+            title: "Swiss",
+            size: "Wood | 2017",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Swiss+Wood+Interior.jpg"
         },
     ],
-    tatoo: [
+    tattoo: [
         {
             title: "McMurtry Lion",
             size: "Ink | 2017",
