@@ -2662,7 +2662,7 @@ var App = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'flex-coll w-full', id: 'main-wrapper' },
+                { className: 'w-full', id: 'main-wrapper' },
                 _react2.default.createElement(_Navbar2.default, null),
                 _react2.default.createElement(
                     _reactRouterDom.Switch,

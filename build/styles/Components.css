@@ -199,6 +199,17 @@
 
 }
 
+@media only screen and (min-height: 730px) {
+
+
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+    }
+
+}
+
 .end-text {
     color: #fff;
     font-size: 12px;
