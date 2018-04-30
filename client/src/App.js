@@ -27,7 +27,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="flex-coll w-full">
+            <div className="flex-coll w-full" id="main-wrapper">
                 <Navbar />
                 <Switch>
                     <Route exact

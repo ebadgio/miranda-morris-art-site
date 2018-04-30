@@ -49,7 +49,7 @@ class Gallery extends React.Component {
                 {/*<Menu items={['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO']}*/}
                       {/*active={this.state.tab}*/}
                       {/*switchFunc={(t) => this.switchTab(t)}/>*/}
-                <div className="menu-wrapper row between">
+                <div className="menu-wrapper row center">
                     {items.map((item, idx) =>
                         <div onClick={() => this.switchTab(item)}
                              key={idx}

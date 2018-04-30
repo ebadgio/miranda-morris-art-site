@@ -2662,7 +2662,7 @@ var App = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'flex-coll w-full' },
+                { className: 'flex-coll w-full', id: 'main-wrapper' },
                 _react2.default.createElement(_Navbar2.default, null),
                 _react2.default.createElement(
                     _reactRouterDom.Switch,
@@ -3020,6 +3020,45 @@ var Navbar = function (_React$Component) {
     }
 
     _createClass(Navbar, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            var close = function close() {
+
+                document.getElementById("menu").style.width = "0";
+                document.getElementById('main-wrapper').removeEventListener('click', close);
+            };
+
+            var open = function open() {
+
+                document.getElementById("menu").style.width = "200px";
+                setTimeout(function () {
+                    if (document.getElementById("menu").style.width === '200px') {
+                        document.getElementById('main-wrapper').addEventListener('click', close);
+                    }
+                }, 100);
+            };
+
+            document.getElementById('menu-btn').addEventListener('click', open);
+
+            setInterval(function () {
+                if (window.innerWidth > 750) {
+                    document.getElementById('nav-item-wrapper').style.display = 'inherit';
+                    document.getElementById('menu-btn').style.display = 'none';
+                    document.getElementById("menu").style.width = "0";
+                    // close();
+                    // this.setState({open: true});
+                } else {
+                    document.getElementById('nav-item-wrapper').style.display = 'none';
+                    document.getElementById('menu-btn').style.display = 'flex';
+                }
+            }, 50);
+
+            document.addEventListener('scroll', function () {
+                document.getElementById("menu").style.width = "0";
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -3035,7 +3074,12 @@ var Navbar = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'row between h-full', style: { marginRight: '20px' } },
+                        { id: 'menu-btn' },
+                        _react2.default.createElement('i', { className: 'fas fa-bars', id: 'menu-icon' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'row between h-full', id: 'nav-item-wrapper', style: { marginRight: '20px' } },
                         _react2.default.createElement(
                             _reactRouterDom.Link,
                             { style: { height: '100%' }, to: '/' },
@@ -3078,6 +3122,55 @@ var Navbar = function (_React$Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: 'nav-item row center' },
+                                'CONTACT'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'sidenav flex-col', id: 'menu' },
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-item-side' },
+                                'HOME'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/gallery' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-item-side' },
+                                'GALLERY'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'a',
+                            { target: '_blank', href: 'https://www.society6.com/mirandaxmorris' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-item-side' },
+                                'SHOP'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/about' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-item-side' },
+                                'ABOUT'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/contact' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-item-side' },
                                 'CONTACT'
                             )
                         )
@@ -3382,7 +3475,7 @@ var Gallery = function (_React$Component) {
                 { className: 'page-wrapper flex-col' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'menu-wrapper row between' },
+                    { className: 'menu-wrapper row center' },
                     items.map(function (item, idx) {
                         return _react2.default.createElement(
                             'div',
