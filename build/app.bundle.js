@@ -2927,7 +2927,27 @@ var gallery = {
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
     }],
-    video: []
+    video: [{
+        title: "WITCH DOCTOR | 2018",
+        size: "",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/ropes.png"
+    }, {
+        title: "WITCH DOCTOR | 2018",
+        size: "",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/double+portrait.jpg"
+    }, {
+        title: "WITCH DOCTOR | 2018",
+        size: "",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/portrait+horns.jpg"
+    }, {
+        title: "WITCH DOCTOR | 2018",
+        size: "",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Witch+Doctor+Clones.jpg"
+    }]
 
 };
 
@@ -3443,25 +3463,31 @@ var Gallery = function (_React$Component) {
             switch (t) {
                 case "PAINTING":
                     this.setState({ photos: _data2.default.painting, tab: 'PAINTING' });
+                    // document.getElementById('photo-cont').style.minHeight = 'none';
                     return;
                 case "DRAWING":
-                    // this.setState({tab: 'drawing'});
+
                     this.setState({ photos: _data2.default.drawing, tab: 'DRAWING' });
+                    // document.getElementById('photo-cont').style.minHeight = 'none';
                     return;
                 case "SCULPTURE":
-                    // this.setState({tab: 'sculpture'});
+
                     this.setState({ photos: _data2.default.sculpture, tab: 'SCULPTURE' });
+                    // document.getElementById('photo-cont').style.minHeight = '700px';
                     return;
                 case "TATTOO DESIGN":
-                    // this.setState({tab: 'tattoo'});
+
                     this.setState({ photos: _data2.default.tattoo, tab: 'TATTOO DESIGN' });
+                    // document.getElementById('photo-cont').style.minHeight = '700px';
                     return;
                 case "VIDEO":
-                    //this.setState({tab: 'video'});
+
                     this.setState({ photos: _data2.default.video, tab: 'VIDEO' });
+                    // document.getElementById('photo-cont').style.minHeight = 'none';
                     return;
                 default:
-                    // this.setState({tab: 'painting'});
+
+                    // document.getElementById('photo-cont').style.minHeight = 'none';
                     return;
             }
         }
@@ -3488,12 +3514,28 @@ var Gallery = function (_React$Component) {
                         );
                     })
                 ),
+                this.state.tab === 'VIDEO' ? _react2.default.createElement('iframe', { id: 'embedded',
+                    width: '560',
+                    height: '315',
+                    src: 'https://www.youtube.com/embed/CK-X4Y-zBqo',
+                    frameborder: '0',
+                    allow: 'autoplay; encrypted-media',
+                    allowfullscreen: true }) : _react2.default.createElement('div', null),
+                this.state.tab === 'VIDEO' ? _react2.default.createElement(
+                    'div',
+                    { className: 'description', style: { maxWidth: '400px' } },
+                    'Witch Doctor explores the demonized monstrous-feminine and the antiseptic aesthetic through an ascetic healing ritual, performed by masked witch figures.'
+                ) : _react2.default.createElement('div', null),
                 _react2.default.createElement(
                     'div',
-                    { className: 'deck-wrapper w-full center' },
-                    this.state.photos.map(function (photo) {
-                        return _react2.default.createElement(_Photo2.default, { image: photo, key: photo.src });
-                    })
+                    { id: 'deck' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'deck-wrapper w-full center' },
+                        this.state.photos.map(function (photo) {
+                            return _react2.default.createElement(_Photo2.default, { image: photo, key: photo.src });
+                        })
+                    )
                 )
             );
         }
@@ -3564,7 +3606,9 @@ var Videos = function Videos(_ref) {
     return _react2.default.createElement(
         "div",
         { className: "page-wrapper flex-col" },
-        "Videos"
+        _react2.default.createElement("iframe", { width: "420",
+            height: "315",
+            src: "https://www.youtube.com/watch?v=CK-X4Y-zBqo&t=59s&list=WL&index=9" })
     );
 };
 

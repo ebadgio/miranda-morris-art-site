@@ -163,7 +163,32 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
         },
     ],
-    video: []
+    video: [
+        {
+            title: "WITCH DOCTOR | 2018",
+            size: "",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/ropes.png"
+        },
+        {
+            title: "WITCH DOCTOR | 2018",
+            size: "",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/double+portrait.jpg"
+        },
+        {
+            title: "WITCH DOCTOR | 2018",
+            size: "",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/portrait+horns.jpg"
+        },
+        {
+            title: "WITCH DOCTOR | 2018",
+            size: "",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Witch+Doctor+Clones.jpg"
+        }
+    ]
 
 };
 

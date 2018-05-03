@@ -20,25 +20,31 @@ class Gallery extends React.Component {
         switch (t) {
             case "PAINTING":
                 this.setState({photos: gallery.painting, tab: 'PAINTING'});
+                // document.getElementById('photo-cont').style.minHeight = 'none';
                 return;
             case "DRAWING":
-                // this.setState({tab: 'drawing'});
+
                 this.setState({photos: gallery.drawing, tab: 'DRAWING'});
+                // document.getElementById('photo-cont').style.minHeight = 'none';
                 return;
             case "SCULPTURE":
-                // this.setState({tab: 'sculpture'});
+
                 this.setState({photos: gallery.sculpture, tab: 'SCULPTURE'});
+                // document.getElementById('photo-cont').style.minHeight = '700px';
                 return;
             case "TATTOO DESIGN":
-                // this.setState({tab: 'tattoo'});
+
                 this.setState({photos: gallery.tattoo, tab: 'TATTOO DESIGN'});
+                // document.getElementById('photo-cont').style.minHeight = '700px';
                 return;
             case "VIDEO":
-                //this.setState({tab: 'video'});
+
                 this.setState({photos: gallery.video, tab: 'VIDEO'});
+                // document.getElementById('photo-cont').style.minHeight = 'none';
                 return;
             default:
-                // this.setState({tab: 'painting'});
+
+                // document.getElementById('photo-cont').style.minHeight = 'none';
                 return;
         }
     }
@@ -46,19 +52,36 @@ class Gallery extends React.Component {
     render() {
         return (
             <div className="page-wrapper flex-col">
-                {/*<Menu items={['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO']}*/}
-                      {/*active={this.state.tab}*/}
-                      {/*switchFunc={(t) => this.switchTab(t)}/>*/}
+
                 <div className="menu-wrapper row center">
                     {items.map((item, idx) =>
                         <div onClick={() => this.switchTab(item)}
                              key={idx}
                              className={this.state.tab === item ? "menu-item active row" : "menu-item row"}>{item}</div>)}
                 </div>
-                {/*// <Deck photos={gallery[this.state.tab]}/>*/}
-                <div className="deck-wrapper w-full center">
-                    {this.state.photos.map((photo) => <Photo image={photo} key={photo.src}/>)}
+
+
+                {this.state.tab === 'VIDEO' ? <iframe id="embedded"
+                                                      width="560"
+                                                      height="315"
+                                                      src="https://www.youtube.com/embed/CK-X4Y-zBqo"
+                                                      frameborder="0"
+                                                      allow="autoplay; encrypted-media"
+                                                      allowfullscreen>
+
+                    </iframe> : <div></div>}
+
+                {this.state.tab === 'VIDEO' ?
+                    <div className="description" style={{maxWidth: '400px'}}>
+                        Witch Doctor explores the demonized monstrous-feminine and the antiseptic
+                        aesthetic through an ascetic healing ritual, performed by masked witch
+                        figures.</div> : <div></div>}
+                <div id="deck">
+                    <div className="deck-wrapper w-full center">
+                        {this.state.photos.map((photo) => <Photo image={photo} key={photo.src}/>)}
+                    </div>
                 </div>
+
             </div>
         );
     }
