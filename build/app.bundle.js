@@ -3845,36 +3845,40 @@ var About = function About(_ref) {
 
     return _react2.default.createElement(
         'div',
-        { className: 'page-wrapper', style: { paddingLeft: '20px' } },
-        _react2.default.createElement('div', { style: { marginTop: '40px', height: '10px' } }),
+        { className: 'page-wrapper frame', style: { paddingLeft: '20px' } },
         _react2.default.createElement(
             'div',
-            { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0, paddingRight: '20px' } },
-            _react2.default.createElement('img', { className: 'about-photo left', src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lavish+portrait.jpg' }),
+            { style: { maxWidth: '800px' } },
+            _react2.default.createElement('div', { style: { marginTop: '40px', height: '10px' } }),
             _react2.default.createElement(
                 'div',
-                { className: 'contact-header' },
-                'ABOUT THE ARTIST'
-            ),
-            'Miranda Morris is currently studying studio art, policy studies, and pre-medicine at Rice University (\u201819). Her creative production includes portraiture, sculpture, landscape, and expressionism, with special interests in surrealism, atmospheric color profiles, and the empowerment of female subjects in portraiture.'
-        ),
-        _react2.default.createElement(
-            'div',
-            { style: { clear: 'both', paddingTop: '50px' } },
-            _react2.default.createElement(
-                'div',
-                { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0 } },
+                { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0, paddingRight: '20px' } },
+                _react2.default.createElement('img', { className: 'about-photo left', src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lavish+portrait.jpg' }),
                 _react2.default.createElement(
                     'div',
                     { className: 'contact-header' },
-                    'ACCOMPLISHMENTS'
+                    'ABOUT THE ARTIST'
                 ),
-                _react2.default.createElement('img', { className: 'about-photo right',
-                    src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman+NYTimes.jpg' }),
-                'In 2015, the oil painting Renaissance Woman won first place and the American Vision award from the State of Connecticut Scholastic Art Awards, with the honor of being featured in the New York Times, displayed in the Pratt Institute gallery, and sent on tour to several cities across the country for two years.',
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('br', null),
-                'At Rice University, her artwork has been featured in several locations, including the Moody Center for the Ats, Rice Memorial Center, McMurtry College, Sewall Hall, and Rice Coffeehouse. Her largest piece, McMurtry College, is a permanent gift to her residential college.'
+                'Miranda Morris is currently studying studio art, policy studies, and pre-medicine at Rice University (\u201819). Her creative production includes portraiture, sculpture, landscape, and expressionism, with special interests in surrealism, atmospheric color profiles, and the empowerment of female subjects in portraiture.'
+            ),
+            _react2.default.createElement(
+                'div',
+                { style: { clear: 'both', paddingTop: '50px' } },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0 } },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'contact-header' },
+                        'ACCOMPLISHMENTS'
+                    ),
+                    _react2.default.createElement('img', { className: 'about-photo right',
+                        src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman+NYTimes.jpg' }),
+                    'In 2015, the oil painting Renaissance Woman won first place and the American Vision award from the State of Connecticut Scholastic Art Awards, with the honor of being featured in the New York Times, displayed in the Pratt Institute gallery, and sent on tour to several cities across the country for two years.',
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    'At Rice University, her artwork has been featured in several locations, including the Moody Center for the Ats, Rice Memorial Center, McMurtry College, Sewall Hall, and Rice Coffeehouse. Her largest piece, McMurtry College, is a permanent gift to her residential college.'
+                )
             )
         )
     );
