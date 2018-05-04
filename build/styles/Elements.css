@@ -54,3 +54,94 @@
 #deck {
     calc(100vh - 155px);
 }
+
+.contact-header {
+    font-size: 32px;
+    font-weight: 900;
+    color: #424242;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+.contact-desc {
+    font-size: 16px;
+    color: #757575;
+    line-height: 22px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+    max-width: 350px;
+}
+
+.contact-header-sub {
+    font-size: 18px;
+    font-weight: 900;
+    color: #424242;
+    margin-bottom: 15px;
+
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+
+.btn {
+    width: 50px;
+    height: 50px;
+    color: #fff !important;
+    cursor: pointer;
+    -webkit-transition: background .25s ease;
+    transition: background .25s ease;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.solid {
+    background: #424242;
+}
+
+#insta {
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-transition: color .25s ease !important;
+    transition: color .25s ease !important;
+    margin-right: 20px;
+}
+#insta:hover {
+    color: #fbad50 !important;
+}
+
+#shop {
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-transition: color .25s ease !important;
+    transition: color .25s ease !important;
+}
+
+#shop:hover {
+    color: #40c4ff !important;
+}
+
+.transparent {
+    background: rgba(0,0,0,.5);
+}
+
+.btn-transparent:hover {
+    background: rgba(0,0,0,.7);
+}
+
+.about-photo {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    max-width: 40%;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left
+}

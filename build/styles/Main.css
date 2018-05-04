@@ -16,6 +16,10 @@ a {
     align-items: center;
 }
 
+.row-base {
+    display: flex;
+}
+
 .between {
     justify-content: space-between;
 }
@@ -25,7 +29,7 @@ a {
 }
 
 .page-wrapper {
-    min-height: 200px;
+    min-height: 500px;
     padding-top: 55px;
 }
 

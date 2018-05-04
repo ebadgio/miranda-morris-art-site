@@ -7,6 +7,13 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lavish.JPG"
         },
         {
+            title: "McMurtry College",
+            size: "Oil Painting | 2018 | 60” x 36”",
+            extra: "Photo Reference by Jeffrey Xiong",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/McMurtry+College.JPG"
+
+    },
+        {
             title: "Brad and Marla",
             size: "Colored Pencil, Watercolor | 2018 | 10” x 8” ",
             extra: "",

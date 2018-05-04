@@ -84,14 +84,14 @@ class PhotoViewer extends React.Component {
                             {this.state.image.extra ? <div style={{marginRight: '3px', marginLeft: '3px'}}>{this.state.image.extra}</div> : null}
                         </div>
                         <div id="modal-close">
-                            <div className="btn-transparent frame" onClick={() => this.props.closeFunc()}>
+                            <div className="btn transparent frame" onClick={() => this.props.closeFunc()}>
                                 {/*<i className="fas fa-times" />*/}
                                 X
                             </div>
                         </div>
                     </div>
                     <div id="modal-go-left">
-                        <div className="btn-transparent frame" onClick={() => this.prev()}>
+                        <div className="btn transparent frame" onClick={() => this.prev()}>
                             {/*<i className="fas fa-times" />*/}
                             <i className="fas fa-chevron-left" />
 
@@ -99,7 +99,7 @@ class PhotoViewer extends React.Component {
                         </div>
                     </div>
                     <div id="modal-go-right">
-                        <div className="btn-transparent frame" onClick={() => this.next()}>
+                        <div className="btn transparent frame" onClick={() => this.next()}>
                             {/*<i className="fas fa-times" />*/}
                             <i className="fas fa-chevron-right" />
 

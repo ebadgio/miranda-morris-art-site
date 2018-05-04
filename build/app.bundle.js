@@ -2840,6 +2840,12 @@ var gallery = {
         extra: "Photo Reference by Marius Sperlich",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lavish.JPG"
     }, {
+        title: "McMurtry College",
+        size: "Oil Painting | 2018 | 60” x 36”",
+        extra: "Photo Reference by Jeffrey Xiong",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/McMurtry+College.JPG"
+
+    }, {
         title: "Brad and Marla",
         size: "Colored Pencil, Watercolor | 2018 | 10” x 8” ",
         extra: "",
@@ -3024,7 +3030,24 @@ var Bottom = function Bottom(_ref) {
             { className: "end-text" },
             "\xA9 2018 MIRANDA MORRIS"
         ),
-        _react2.default.createElement("div", null),
+        _react2.default.createElement(
+            "div",
+            null,
+            _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "btn solid frame circle transparent", id: "insta" },
+                    _react2.default.createElement("i", { className: "fab fa-instagram" })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "btn solid circle frame transparent", id: "shop" },
+                    _react2.default.createElement("i", { className: "fas fa-shopping-bag" })
+                )
+            )
+        ),
         _react2.default.createElement(
             "div",
             { className: "end-text" },
@@ -3661,7 +3684,7 @@ var PhotoViewer = function (_React$Component) {
                             { id: 'modal-close' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'btn-transparent frame', onClick: function onClick() {
+                                { className: 'btn transparent frame', onClick: function onClick() {
                                         return _this4.props.closeFunc();
                                     } },
                                 'X'
@@ -3673,7 +3696,7 @@ var PhotoViewer = function (_React$Component) {
                         { id: 'modal-go-left' },
                         _react2.default.createElement(
                             'div',
-                            { className: 'btn-transparent frame', onClick: function onClick() {
+                            { className: 'btn transparent frame', onClick: function onClick() {
                                     return _this4.prev();
                                 } },
                             _react2.default.createElement('i', { className: 'fas fa-chevron-left' })
@@ -3684,7 +3707,7 @@ var PhotoViewer = function (_React$Component) {
                         { id: 'modal-go-right' },
                         _react2.default.createElement(
                             'div',
-                            { className: 'btn-transparent frame', onClick: function onClick() {
+                            { className: 'btn transparent frame', onClick: function onClick() {
                                     return _this4.next();
                                 } },
                             _react2.default.createElement('i', { className: 'fas fa-chevron-right' })
@@ -3813,9 +3836,39 @@ var About = function About(_ref) {
     _objectDestructuringEmpty(_ref);
 
     return _react2.default.createElement(
-        "div",
-        { className: "page-wrapper flex-col" },
-        "About"
+        'div',
+        { className: 'page-wrapper', style: { paddingLeft: '20px' } },
+        _react2.default.createElement('div', { style: { marginTop: '80px', height: '10px' } }),
+        _react2.default.createElement(
+            'div',
+            { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0, paddingRight: '20px' } },
+            _react2.default.createElement('img', { className: 'about-photo left', src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lavish+portrait.jpg' }),
+            _react2.default.createElement(
+                'div',
+                { className: 'contact-header' },
+                'ABOUT THE ARTIST'
+            ),
+            'Miranda Morris is currently studying studio art, policy studies, and pre-medicine at Rice University (\u201819). Her creative production includes portraiture, sculpture, landscape, and expressionism, with special interests in surrealism, atmospheric color profiles, and the empowerment of female subjects in portraiture.'
+        ),
+        _react2.default.createElement(
+            'div',
+            { style: { clear: 'both', paddingTop: '50px' } },
+            _react2.default.createElement(
+                'div',
+                { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0 } },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'contact-header' },
+                    'ACCOMPLISHMENTS'
+                ),
+                _react2.default.createElement('img', { className: 'about-photo right',
+                    src: 'https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman+NYTimes.jpg' }),
+                'In 2015, the oil painting Renaissance Woman won first place and the American Vision award from the State of Connecticut Scholastic Art Awards, with the honor of being featured in the New York Times, displayed in the Pratt Institute gallery, and sent on tour to several cities across the country for two years.',
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                'At Rice University, her artwork has been featured in several locations, including the Moody Center for the Ats, Rice Memorial Center, McMurtry College, Sewall Hall, and Rice Coffeehouse. Her largest piece, McMurtry College, is a permanent gift to her residential college.'
+            )
+        )
     );
 };
 
@@ -3845,8 +3898,58 @@ var Contact = function Contact(_ref) {
 
     return _react2.default.createElement(
         "div",
-        { className: "page-wrapper flex-col" },
-        "Contact"
+        { className: "page-wrapper frame" },
+        _react2.default.createElement(
+            "div",
+            { className: "contact-wrapper" },
+            _react2.default.createElement(
+                "div",
+                { className: "contact-header" },
+                "CONTACT"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "row-base wrap" },
+                _react2.default.createElement(
+                    "div",
+                    { style: { marginBottom: '60px' } },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "contact-desc" },
+                        "Working and living in Houston, TX. For inquiries about available artwork, please email directly."
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { style: { marginBottom: '10px' } },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "contact-header-sub" },
+                            "Email: "
+                        ),
+                        _react2.default.createElement(
+                            "a",
+                            { style: { color: '#3d5afe' }, href: "mailto:mirandaxmorris@gmail.com" },
+                            "mirandaxmorris@gmail.com"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            { className: "contact-header-sub" },
+                            "Instagram: "
+                        ),
+                        _react2.default.createElement(
+                            "a",
+                            { style: { color: '#3d5afe' }, href: "https://www.instagram.com/mirandaxiao_/" },
+                            "@mirandaxiao"
+                        )
+                    )
+                ),
+                _react2.default.createElement("div", null)
+            )
+        )
     );
 };
 
