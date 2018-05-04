@@ -3169,7 +3169,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4)).map(function (photo) {
+                            this.state.photos.slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });
@@ -3178,7 +3178,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
-                            this.state.photos.slice(3 * Math.floor(this.state.size / 4)).map(function (photo) {
+                            this.state.photos.slice(3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });
@@ -3205,7 +3205,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(Math.floor(this.state.size / 3), 2 * Math.floor(this.state.size / 3)).map(function (photo) {
+                            this.state.photos.slice(Math.floor(this.state.size / 3), 2 * Math.floor(this.state.size / 3) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });
@@ -3214,7 +3214,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
-                            this.state.photos.slice(2 * Math.floor(this.state.size / 3)).map(function (photo) {
+                            this.state.photos.slice(2 * Math.floor(this.state.size / 3) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });
@@ -3232,7 +3232,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(0, Math.floor(this.state.size / 2)).map(function (photo) {
+                            this.state.photos.slice(0, Math.floor(this.state.size / 2) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });
@@ -3241,7 +3241,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
-                            this.state.photos.slice(Math.floor(this.state.size / 2)).map(function (photo) {
+                            this.state.photos.slice(Math.floor(this.state.size / 2) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this3.props.selectFunc,
                                     key: photo.src });

@@ -75,14 +75,14 @@ class Deck extends React.Component{
                         </div>
                         <div className="flex-col deck-col">
                             {this.state.photos
-                                .slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4))
+                                .slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
                         </div>
                         <div className="flex-col deck-col" style={{marginRight: 0}}>
                             {this.state.photos
-                                .slice(3 * Math.floor(this.state.size / 4))
+                                .slice(3 * Math.floor(this.state.size / 4) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
@@ -103,14 +103,14 @@ class Deck extends React.Component{
                         </div>
                         <div className="flex-col deck-col">
                             {this.state.photos
-                                .slice(Math.floor(this.state.size / 3), 2 * Math.floor(this.state.size / 3))
+                                .slice(Math.floor(this.state.size / 3), 2 * Math.floor(this.state.size / 3) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
                         </div>
                         <div className="flex-col deck-col" style={{marginRight: 0}}>
                             {this.state.photos
-                                .slice(2 * Math.floor(this.state.size / 3))
+                                .slice(2 * Math.floor(this.state.size / 3) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
@@ -124,14 +124,14 @@ class Deck extends React.Component{
                     <div className="deck-wrapper w-full center">
                         <div className="flex-col deck-col">
                             {this.state.photos
-                                .slice(0, Math.floor(this.state.size / 2))
+                                .slice(0, Math.floor(this.state.size / 2) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
                         </div>
                         <div className="flex-col deck-col" style={{marginRight: 0}}>
                             {this.state.photos
-                                .slice(Math.floor(this.state.size / 2))
+                                .slice(Math.floor(this.state.size / 2) + 1)
                                 .map((photo) => <Photo image={photo}
                                                        selectFunc={this.props.selectFunc}
                                                        key={photo.src}/>)}
