@@ -4,6 +4,7 @@ import React from 'react';
 import Photo from '../components/Photo';
 
 import gallery from '../../assets/data';
+import PhotoViewer from "../components/PhotoViewer";
 const items=['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO'];
 
 class Gallery extends React.Component {
@@ -13,7 +14,11 @@ class Gallery extends React.Component {
         this.state = {
             tab: 'PAINTING',
             photos: gallery.painting,
+            modal: false,
+            view: {},
+            viewIdx: 0
         }
+        this.view = this.view.bind(this);
     }
 
     switchTab(t) {
@@ -49,9 +54,14 @@ class Gallery extends React.Component {
         }
     }
 
+    view(photo) {
+        // console.log('called view', photo, this.state.photos.indexOf(photo));
+        this.setState({view: photo, modal: true, viewIdx: this.state.photos.indexOf(photo)});
+    }
+
     render() {
         return (
-            <div className="page-wrapper flex-col">
+            <div className="page-wrapper flex-col" id="gallery">
 
                 <div className="menu-wrapper row center">
                     {items.map((item, idx) =>
@@ -78,9 +88,12 @@ class Gallery extends React.Component {
                         figures.</div> : <div></div>}
                 <div id="deck">
                     <div className="deck-wrapper w-full center">
-                        {this.state.photos.map((photo) => <Photo image={photo} key={photo.src}/>)}
+                        {this.state.photos.map((photo) => <Photo image={photo}
+                                                                 selectFunc={this.view}
+                                                                 key={photo.src}/>)}
                     </div>
                 </div>
+                <PhotoViewer open={this.state.modal} viewIdx={this.state.viewIdx} photos={this.state.photos} view={this.state.view}/>
 
             </div>
         );

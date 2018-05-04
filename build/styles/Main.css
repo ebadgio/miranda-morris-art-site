@@ -35,6 +35,16 @@ a {
     align-items: center;
 }
 
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 1px 12px rgba(0,0,0,.60);
+    box-shadow: 0 1px 12px rgba(0,0,0,.60);
+}
 
 /*#main-wrapper {*/
     /*min-height: 100vh;*/
