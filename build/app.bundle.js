@@ -3107,41 +3107,50 @@ var Deck = function (_React$Component) {
             clearInterval(intervalId);
         }
     }, {
-        key: 'render',
-        value: function render() {
+        key: 'small',
+        value: function small() {
             var _this3 = this;
 
-            if (this.state.size < 5) {
+            var sendWidth = void 0;
+            var margin = true;
 
-                var sendWidth = void 0;
-                var margin = true;
+            if (this.state.windowWidth > 900) {
+                sendWidth = '20%';
+            } else if (this.state.windowWidth > 750) {
+                sendWidth = '25%';
+            } else if (this.state.windowWidth > 400) {
+                sendWidth = '40%';
+            } else {
+                sendWidth = '100%';
+                margin = false;
+            }
 
-                if (this.state.windowWidth > 900) {
-                    sendWidth = '20%';
-                } else if (this.state.windowWidth > 750) {
-                    sendWidth = '25%';
-                } else if (this.state.windowWidth > 400) {
-                    sendWidth = '40%';
-                } else {
-                    sendWidth = '100%';
-                    margin = false;
+            return _react2.default.createElement(
+                'div',
+                { id: 'deck' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'deck-wrapper w-full center', style: { flexWrap: 'wrap' } },
+                    this.state.photos.map(function (photo) {
+                        return _react2.default.createElement(_Photo2.default, { image: photo,
+                            style: margin ? { marginRight: '30px', width: sendWidth } : { width: sendWidth },
+                            selectFunc: _this3.props.selectFunc,
+                            key: photo.src });
+                    })
+                )
+            );
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this4 = this;
+
+            if (this.state.windowWidth > 900) {
+
+                if (this.state.size < 5) {
+                    return this.small();
                 }
 
-                return _react2.default.createElement(
-                    'div',
-                    { id: 'deck' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'deck-wrapper w-full center', style: { flexWrap: 'wrap' } },
-                        this.state.photos.map(function (photo) {
-                            return _react2.default.createElement(_Photo2.default, { image: photo,
-                                style: margin ? { marginRight: '30px', width: sendWidth } : { width: sendWidth },
-                                selectFunc: _this3.props.selectFunc,
-                                key: photo.src });
-                        })
-                    )
-                );
-            } else if (this.state.windowWidth > 900) {
                 return _react2.default.createElement(
                     'div',
                     { id: 'deck' },
@@ -3153,7 +3162,7 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col' },
                             this.state.photos.slice(0, Math.floor(this.state.size / 4)).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
@@ -3162,7 +3171,7 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col' },
                             this.state.photos.slice(Math.floor(this.state.size / 4), 2 * Math.floor(this.state.size / 4)).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
@@ -3171,7 +3180,7 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col' },
                             this.state.photos.slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
@@ -3180,13 +3189,16 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
                             this.state.photos.slice(3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         )
                     )
                 );
             } else if (this.state.windowWidth > 750) {
+                if (this.state.size < 4) {
+                    return this.small();
+                }
                 return _react2.default.createElement(
                     'div',
                     { id: 'deck' },
@@ -3198,7 +3210,7 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col' },
                             this.state.photos.slice(0, Math.floor(this.state.size / 3)).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
@@ -3207,7 +3219,7 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col' },
                             this.state.photos.slice(Math.floor(this.state.size / 3), 2 * Math.floor(this.state.size / 3) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
@@ -3216,13 +3228,16 @@ var Deck = function (_React$Component) {
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
                             this.state.photos.slice(2 * Math.floor(this.state.size / 3) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         )
                     )
                 );
             } else if (this.state.windowWidth > 400) {
+                if (this.state.size < 3) {
+                    return this.small();
+                }
                 return _react2.default.createElement(
                     'div',
                     { id: 'deck' },
@@ -3232,18 +3247,18 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(0, Math.floor(this.state.size / 2) + 1).map(function (photo) {
+                            this.state.photos.slice(0, Math.floor(this.state.size / 2)).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
-                            this.state.photos.slice(Math.floor(this.state.size / 2) + 1).map(function (photo) {
+                            this.state.photos.slice(Math.floor(this.state.size / 2)).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
-                                    selectFunc: _this3.props.selectFunc,
+                                    selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
                             })
                         )
@@ -3261,7 +3276,7 @@ var Deck = function (_React$Component) {
                         { className: 'flex-col deck-col', style: { marginRight: 0 } },
                         this.state.photos.map(function (photo) {
                             return _react2.default.createElement(_Photo2.default, { image: photo,
-                                selectFunc: _this3.props.selectFunc,
+                                selectFunc: _this4.props.selectFunc,
                                 key: photo.src });
                         })
                     )
