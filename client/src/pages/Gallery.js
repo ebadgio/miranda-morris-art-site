@@ -5,6 +5,7 @@ import Photo from '../components/Photo';
 
 import gallery from '../../assets/data';
 import PhotoViewer from "../components/PhotoViewer";
+import Deck from "../components/Deck";
 const items=['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO'];
 
 class Gallery extends React.Component {
@@ -56,7 +57,7 @@ class Gallery extends React.Component {
 
     view(photo) {
         // console.log('called view', photo, this.state.photos.indexOf(photo));
-        this.setState({view: photo, modal: true, viewIdx: this.state.photos.indexOf(photo)});
+        this.setState({modal: true, viewIdx: this.state.photos.indexOf(photo)});
     }
 
     close() {
@@ -92,13 +93,7 @@ class Gallery extends React.Component {
                         Witch Doctor explores the demonized monstrous-feminine and the antiseptic
                         aesthetic through an ascetic healing ritual, performed by masked witch
                         figures.</div> : <div></div>}
-                <div id="deck">
-                    <div className="deck-wrapper w-full center">
-                        {this.state.photos.map((photo) => <Photo image={photo}
-                                                                 selectFunc={this.view}
-                                                                 key={photo.src}/>)}
-                    </div>
-                </div>
+                <Deck photos={this.state.photos} size={this.state.photos.length} selectFunc={this.view}/>
                 <PhotoViewer open={this.state.modal}
                              closeFunc={() => this.close()}
                              viewIdx={this.state.viewIdx}

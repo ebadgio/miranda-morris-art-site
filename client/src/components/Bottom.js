@@ -11,7 +11,7 @@ const Bottom = ({}) => {
 
             </div>
             <div className="end-text">
-                Site Design By <strong><a target="_blank" href="https://www.github.com/ebadgio">ELI BADGIO</a></strong>
+                Site Design By <a target="_blank" href="https://www.github.com/ebadgio">Eli Badgio</a>
             </div>
         </div>
     );

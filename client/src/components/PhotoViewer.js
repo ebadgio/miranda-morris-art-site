@@ -7,6 +7,7 @@ class PhotoViewer extends React.Component {
             open: props.open,
             photos: [],
             size: 1,
+            idx: 0,
             image: {}
         }
     }
@@ -71,13 +72,16 @@ class PhotoViewer extends React.Component {
             return (
                 <div className="backdrop frame">
                     <div className="modal-cont">
+                        <div id="modal-details">
+                            <strong>{this.state.idx + 1}</strong>{' of '}<strong>{this.state.size}</strong>
+                        </div>
                         <img className="modal-image"
                              style={{maxHeight: window.innerHeight + 'px'}}
                              src={this.state.image.src} id="modal-img-id"/>
                         <div className="modal-desc row between">
                             <div style={{marginRight: '15px', marginLeft: '3px'}}><strong>{this.state.image.title}</strong></div>
                             <div style={{marginRight: '3px'}}>{this.state.image.size}</div>
-                            {this.state.image.extra ? <div style={{marginRight: '3px'}}>{this.state.image.extra}</div> : null}
+                            {this.state.image.extra ? <div style={{marginRight: '3px', marginLeft: '3px'}}>{this.state.image.extra}</div> : null}
                         </div>
                         <div id="modal-close">
                             <div className="btn-transparent frame" onClick={() => this.props.closeFunc()}>
@@ -106,7 +110,7 @@ class PhotoViewer extends React.Component {
             );
         }
         return (
-            <div style={{display: 'none'}}></div>
+            <div style={{display: 'none'}} />
         );
 
     }
