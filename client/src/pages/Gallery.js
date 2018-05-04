@@ -17,7 +17,7 @@ class Gallery extends React.Component {
             modal: false,
             view: {},
             viewIdx: 0
-        }
+        };
         this.view = this.view.bind(this);
     }
 
@@ -59,6 +59,12 @@ class Gallery extends React.Component {
         this.setState({view: photo, modal: true, viewIdx: this.state.photos.indexOf(photo)});
     }
 
+    close() {
+        this.setState({modal: false});
+        document.getElementById('body').style.overflow = 'auto';
+        document.getElementById('gallery').style.paddingTop = '55px';
+    }
+
     render() {
         return (
             <div className="page-wrapper flex-col" id="gallery">
@@ -93,7 +99,11 @@ class Gallery extends React.Component {
                                                                  key={photo.src}/>)}
                     </div>
                 </div>
-                <PhotoViewer open={this.state.modal} viewIdx={this.state.viewIdx} photos={this.state.photos} view={this.state.view}/>
+                <PhotoViewer open={this.state.modal}
+                             closeFunc={() => this.close()}
+                             viewIdx={this.state.viewIdx}
+                             photos={this.state.photos}
+                             view={this.state.view}/>
 
             </div>
         );

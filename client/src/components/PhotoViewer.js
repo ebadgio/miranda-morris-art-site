@@ -29,7 +29,7 @@ class PhotoViewer extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('will receive', nextProps);
+        // console.log('will receive', nextProps);
         if (nextProps.open) {
             document.getElementById('body').style.overflow = 'hidden';
             document.getElementById('gallery').style.padding = '0';
@@ -47,12 +47,6 @@ class PhotoViewer extends React.Component {
 
     componentWillUnmount(){
         document.removeEventListener("keydown", (e) => this.escFunction(e), false);
-    }
-
-    close() {
-        this.setState({open: false});
-        document.getElementById('body').style.overflow = 'auto';
-        document.getElementById('gallery').style.paddingTop = '55px';
     }
 
     next() {
@@ -81,12 +75,12 @@ class PhotoViewer extends React.Component {
                              style={{maxHeight: window.innerHeight + 'px'}}
                              src={this.state.image.src} id="modal-img-id"/>
                         <div className="modal-desc row between">
-                            <div><strong>{this.state.image.title}</strong></div>
-                            <div>{this.state.image.size}</div>
-                            {this.state.image.extra ? <div>{this.state.image.extra}</div> : null}
+                            <div style={{marginRight: '15px', marginLeft: '3px'}}><strong>{this.state.image.title}</strong></div>
+                            <div style={{marginRight: '3px'}}>{this.state.image.size}</div>
+                            {this.state.image.extra ? <div style={{marginRight: '3px'}}>{this.state.image.extra}</div> : null}
                         </div>
                         <div id="modal-close">
-                            <div className="btn-transparent frame" onClick={() => this.close()}>
+                            <div className="btn-transparent frame" onClick={() => this.props.closeFunc()}>
                                 {/*<i className="fas fa-times" />*/}
                                 X
                             </div>

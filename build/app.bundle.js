@@ -2595,7 +2595,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(13);
 
-var _Navbar = __webpack_require__(40);
+var _Navbar = __webpack_require__(39);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
@@ -3006,206 +3006,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PhotoViewer = function (_React$Component) {
-    _inherits(PhotoViewer, _React$Component);
-
-    function PhotoViewer(props) {
-        _classCallCheck(this, PhotoViewer);
-
-        var _this = _possibleConstructorReturn(this, (PhotoViewer.__proto__ || Object.getPrototypeOf(PhotoViewer)).call(this, props));
-
-        _this.state = {
-            open: props.open,
-            photos: [],
-            size: 1,
-            image: {}
-        };
-        return _this;
-    }
-
-    _createClass(PhotoViewer, [{
-        key: 'escFunction',
-        value: function escFunction(event) {
-            if (event.keyCode === 27) {
-                //Do whatever when esc is pressed
-                this.setState({ open: false });
-                document.getElementById('body').style.overflow = 'auto';
-                document.getElementById('gallery').style.paddingTop = '55px';
-            }
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var _this2 = this;
-
-            document.addEventListener("keydown", function (e) {
-                return _this2.escFunction(e);
-            }, false);
-            if (this.props.open) {
-                document.getElementById('body').style.overflow = 'hidden';
-                document.getElementById('gallery').style.padding = '0';
-            }
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            console.log('will receive', nextProps);
-            if (nextProps.open) {
-                document.getElementById('body').style.overflow = 'hidden';
-                document.getElementById('gallery').style.padding = '0';
-            } else {
-                document.getElementById('body').style.overflow = 'auto';
-                document.getElementById('gallery').style.paddingTop = '55px';
-            }
-            this.setState({
-                open: nextProps.open,
-                image: nextProps.photos[nextProps.viewIdx],
-                idx: nextProps.viewIdx,
-                size: nextProps.photos.length,
-                photos: nextProps.photos });
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            var _this3 = this;
-
-            document.removeEventListener("keydown", function (e) {
-                return _this3.escFunction(e);
-            }, false);
-        }
-    }, {
-        key: 'close',
-        value: function close() {
-            this.setState({ open: false });
-            document.getElementById('body').style.overflow = 'auto';
-            document.getElementById('gallery').style.paddingTop = '55px';
-        }
-    }, {
-        key: 'next',
-        value: function next() {
-            if (this.state.idx === this.state.size - 1) {
-                this.setState({ idx: 0, image: this.state.photos[0] });
-            } else {
-                this.setState({ idx: this.state.idx + 1, image: this.state.photos[this.state.idx + 1] });
-            }
-        }
-    }, {
-        key: 'prev',
-        value: function prev() {
-            if (this.state.idx === 0) {
-                this.setState({ idx: this.state.size - 1, image: this.state.photos[this.state.size - 1] });
-            } else {
-                this.setState({ idx: this.state.idx - 1, image: this.state.photos[this.state.idx - 1] });
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this4 = this;
-
-            if (this.state.open) {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'backdrop frame' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'modal-cont' },
-                        _react2.default.createElement('img', { className: 'modal-image',
-                            style: { maxHeight: window.innerHeight + 'px' },
-                            src: this.state.image.src, id: 'modal-img-id' }),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'modal-desc row between' },
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement(
-                                    'strong',
-                                    null,
-                                    this.state.image.title
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                this.state.image.size
-                            ),
-                            this.state.image.extra ? _react2.default.createElement(
-                                'div',
-                                null,
-                                this.state.image.extra
-                            ) : null
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { id: 'modal-close' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'btn-transparent frame', onClick: function onClick() {
-                                        return _this4.close();
-                                    } },
-                                'X'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { id: 'modal-go-left' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'btn-transparent frame', onClick: function onClick() {
-                                    return _this4.prev();
-                                } },
-                            _react2.default.createElement('i', { className: 'fas fa-chevron-left' })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { id: 'modal-go-right' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'btn-transparent frame', onClick: function onClick() {
-                                    return _this4.next();
-                                } },
-                            _react2.default.createElement('i', { className: 'fas fa-chevron-right' })
-                        )
-                    )
-                );
-            }
-            return _react2.default.createElement('div', { style: { display: 'none' } });
-        }
-    }]);
-
-    return PhotoViewer;
-}(_react2.default.Component);
-
-exports.default = PhotoViewer;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
 var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -3392,7 +3192,7 @@ var Navbar = function (_React$Component) {
 exports.default = Navbar;
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3444,6 +3244,199 @@ var Photo = function Photo(_ref) {
 };
 
 exports.default = Photo;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PhotoViewer = function (_React$Component) {
+    _inherits(PhotoViewer, _React$Component);
+
+    function PhotoViewer(props) {
+        _classCallCheck(this, PhotoViewer);
+
+        var _this = _possibleConstructorReturn(this, (PhotoViewer.__proto__ || Object.getPrototypeOf(PhotoViewer)).call(this, props));
+
+        _this.state = {
+            open: props.open,
+            photos: [],
+            size: 1,
+            image: {}
+        };
+        return _this;
+    }
+
+    _createClass(PhotoViewer, [{
+        key: 'escFunction',
+        value: function escFunction(event) {
+            if (event.keyCode === 27) {
+                //Do whatever when esc is pressed
+                this.setState({ open: false });
+                document.getElementById('body').style.overflow = 'auto';
+                document.getElementById('gallery').style.paddingTop = '55px';
+            }
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            document.addEventListener("keydown", function (e) {
+                return _this2.escFunction(e);
+            }, false);
+            if (this.props.open) {
+                document.getElementById('body').style.overflow = 'hidden';
+                document.getElementById('gallery').style.padding = '0';
+            }
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            // console.log('will receive', nextProps);
+            if (nextProps.open) {
+                document.getElementById('body').style.overflow = 'hidden';
+                document.getElementById('gallery').style.padding = '0';
+            } else {
+                document.getElementById('body').style.overflow = 'auto';
+                document.getElementById('gallery').style.paddingTop = '55px';
+            }
+            this.setState({
+                open: nextProps.open,
+                image: nextProps.photos[nextProps.viewIdx],
+                idx: nextProps.viewIdx,
+                size: nextProps.photos.length,
+                photos: nextProps.photos });
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            var _this3 = this;
+
+            document.removeEventListener("keydown", function (e) {
+                return _this3.escFunction(e);
+            }, false);
+        }
+    }, {
+        key: 'next',
+        value: function next() {
+            if (this.state.idx === this.state.size - 1) {
+                this.setState({ idx: 0, image: this.state.photos[0] });
+            } else {
+                this.setState({ idx: this.state.idx + 1, image: this.state.photos[this.state.idx + 1] });
+            }
+        }
+    }, {
+        key: 'prev',
+        value: function prev() {
+            if (this.state.idx === 0) {
+                this.setState({ idx: this.state.size - 1, image: this.state.photos[this.state.size - 1] });
+            } else {
+                this.setState({ idx: this.state.idx - 1, image: this.state.photos[this.state.idx - 1] });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this4 = this;
+
+            if (this.state.open) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'backdrop frame' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'modal-cont' },
+                        _react2.default.createElement('img', { className: 'modal-image',
+                            style: { maxHeight: window.innerHeight + 'px' },
+                            src: this.state.image.src, id: 'modal-img-id' }),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'modal-desc row between' },
+                            _react2.default.createElement(
+                                'div',
+                                { style: { marginRight: '15px', marginLeft: '3px' } },
+                                _react2.default.createElement(
+                                    'strong',
+                                    null,
+                                    this.state.image.title
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: { marginRight: '3px' } },
+                                this.state.image.size
+                            ),
+                            this.state.image.extra ? _react2.default.createElement(
+                                'div',
+                                { style: { marginRight: '3px' } },
+                                this.state.image.extra
+                            ) : null
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { id: 'modal-close' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'btn-transparent frame', onClick: function onClick() {
+                                        return _this4.props.closeFunc();
+                                    } },
+                                'X'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { id: 'modal-go-left' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'btn-transparent frame', onClick: function onClick() {
+                                    return _this4.prev();
+                                } },
+                            _react2.default.createElement('i', { className: 'fas fa-chevron-left' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { id: 'modal-go-right' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'btn-transparent frame', onClick: function onClick() {
+                                    return _this4.next();
+                                } },
+                            _react2.default.createElement('i', { className: 'fas fa-chevron-right' })
+                        )
+                    )
+                );
+            }
+            return _react2.default.createElement('div', { style: { display: 'none' } });
+        }
+    }]);
+
+    return PhotoViewer;
+}(_react2.default.Component);
+
+exports.default = PhotoViewer;
 
 /***/ }),
 /* 42 */
@@ -3613,7 +3606,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Photo = __webpack_require__(41);
+var _Photo = __webpack_require__(40);
 
 var _Photo2 = _interopRequireDefault(_Photo);
 
@@ -3621,9 +3614,9 @@ var _data = __webpack_require__(37);
 
 var _data2 = _interopRequireDefault(_data);
 
-var _Modal = __webpack_require__(39);
+var _PhotoViewer = __webpack_require__(41);
 
-var _Modal2 = _interopRequireDefault(_Modal);
+var _PhotoViewer2 = _interopRequireDefault(_PhotoViewer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3695,6 +3688,13 @@ var Gallery = function (_React$Component) {
             this.setState({ view: photo, modal: true, viewIdx: this.state.photos.indexOf(photo) });
         }
     }, {
+        key: 'close',
+        value: function close() {
+            this.setState({ modal: false });
+            document.getElementById('body').style.overflow = 'auto';
+            document.getElementById('gallery').style.paddingTop = '55px';
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -3742,7 +3742,13 @@ var Gallery = function (_React$Component) {
                         })
                     )
                 ),
-                _react2.default.createElement(_Modal2.default, { open: this.state.modal, viewIdx: this.state.viewIdx, photos: this.state.photos, view: this.state.view })
+                _react2.default.createElement(_PhotoViewer2.default, { open: this.state.modal,
+                    closeFunc: function closeFunc() {
+                        return _this2.close();
+                    },
+                    viewIdx: this.state.viewIdx,
+                    photos: this.state.photos,
+                    view: this.state.view })
             );
         }
     }]);
