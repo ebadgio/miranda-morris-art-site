@@ -26,6 +26,7 @@ class Deck extends React.Component{
         if (this.state.size < 4) {
 
             let sendWidth;
+            let margin = true;
 
             if (this.state.windowWidth > 900) {
                 sendWidth = '20%';
@@ -35,13 +36,16 @@ class Deck extends React.Component{
                 sendWidth = '40%';
             } else {
                 sendWidth = '100%';
+                margin = false;
             }
 
             return (
                 <div id="deck">
                     <div className="deck-wrapper w-full center" style={{flexWrap: 'wrap'}}>
                         {this.state.photos.map((photo) => <Photo image={photo}
-                                                                 style={{marginRight: '30px', width: sendWidth}}
+                                                                 style={margin ?
+                                                                     {marginRight: '30px', width: sendWidth} :
+                                                                     {width: sendWidth}}
                                                                  selectFunc={this.props.selectFunc}
                                                                  key={photo.src}/>)}
                     </div>

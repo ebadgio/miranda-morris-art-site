@@ -3109,6 +3109,7 @@ var Deck = function (_React$Component) {
             if (this.state.size < 4) {
 
                 var sendWidth = void 0;
+                var margin = true;
 
                 if (this.state.windowWidth > 900) {
                     sendWidth = '20%';
@@ -3118,6 +3119,7 @@ var Deck = function (_React$Component) {
                     sendWidth = '40%';
                 } else {
                     sendWidth = '100%';
+                    margin = false;
                 }
 
                 return _react2.default.createElement(
@@ -3128,7 +3130,7 @@ var Deck = function (_React$Component) {
                         { className: 'deck-wrapper w-full center', style: { flexWrap: 'wrap' } },
                         this.state.photos.map(function (photo) {
                             return _react2.default.createElement(_Photo2.default, { image: photo,
-                                style: { marginRight: '30px', width: sendWidth },
+                                style: margin ? { marginRight: '30px', width: sendWidth } : { width: sendWidth },
                                 selectFunc: _this3.props.selectFunc,
                                 key: photo.src });
                         })
