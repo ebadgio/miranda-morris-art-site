@@ -15,7 +15,7 @@ const Contact = ({}) => {
                         </div>
                         <div>
                             <span className="contact-header-sub">Instagram: </span>
-                            <a style={{color: '#3d5afe'}} href="https://www.instagram.com/mirandaxiao_/">@mirandaxiao</a>
+                            <a target="_blank" style={{color: '#3d5afe'}} href="https://www.instagram.com/mirandaxiao_/">@mirandaxiao</a>
                         </div>
                     </div>
                     <div>

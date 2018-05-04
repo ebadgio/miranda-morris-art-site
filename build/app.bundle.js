@@ -3037,14 +3037,22 @@ var Bottom = function Bottom(_ref) {
                 "div",
                 { className: "row" },
                 _react2.default.createElement(
-                    "div",
-                    { className: "btn solid frame circle transparent", id: "insta" },
-                    _react2.default.createElement("i", { className: "fab fa-instagram" })
+                    "a",
+                    { target: "_blank", href: "https://www.instagram.com/mirandaxiao_/" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "btn solid frame circle transparent", id: "insta" },
+                        _react2.default.createElement("i", { className: "fab fa-instagram" })
+                    )
                 ),
                 _react2.default.createElement(
-                    "div",
-                    { className: "btn solid circle frame transparent", id: "shop" },
-                    _react2.default.createElement("i", { className: "fas fa-shopping-bag" })
+                    "a",
+                    { target: "_blank", href: "https://www.society6.com/mirandaxmorris" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "btn solid circle frame transparent", id: "shop" },
+                        _react2.default.createElement("i", { className: "fas fa-shopping-bag" })
+                    )
                 )
             )
         ),
@@ -3838,7 +3846,7 @@ var About = function About(_ref) {
     return _react2.default.createElement(
         'div',
         { className: 'page-wrapper', style: { paddingLeft: '20px' } },
-        _react2.default.createElement('div', { style: { marginTop: '80px', height: '10px' } }),
+        _react2.default.createElement('div', { style: { marginTop: '40px', height: '10px' } }),
         _react2.default.createElement(
             'div',
             { className: 'contact-desc', style: { maxWidth: 'none', marginRight: 0, paddingRight: '20px' } },
@@ -3942,7 +3950,7 @@ var Contact = function Contact(_ref) {
                         ),
                         _react2.default.createElement(
                             "a",
-                            { style: { color: '#3d5afe' }, href: "https://www.instagram.com/mirandaxiao_/" },
+                            { target: "_blank", style: { color: '#3d5afe' }, href: "https://www.instagram.com/mirandaxiao_/" },
                             "@mirandaxiao"
                         )
                     )

@@ -9,12 +9,16 @@ const Bottom = ({}) => {
             </div>
             <div>
             <div className="row">
-                <div className="btn solid frame circle transparent" id="insta">
-                    <i className="fab fa-instagram" />
-                </div>
-                <div className="btn solid circle frame transparent" id="shop">
-                    <i className="fas fa-shopping-bag" />
-                </div>
+                <a target="_blank" href="https://www.instagram.com/mirandaxiao_/">
+                    <div className="btn solid frame circle transparent" id="insta">
+                        <i className="fab fa-instagram" />
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.society6.com/mirandaxmorris">
+                    <div className="btn solid circle frame transparent" id="shop">
+                        <i className="fas fa-shopping-bag" />
+                    </div>
+                </a>
             </div>
             </div>
             <div className="end-text">
