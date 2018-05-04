@@ -3024,7 +3024,7 @@ var Bottom = function Bottom(_ref) {
 
     return _react2.default.createElement(
         "div",
-        { className: "bottom row between" },
+        { className: "bottom row between wrap" },
         _react2.default.createElement(
             "div",
             { className: "end-text" },

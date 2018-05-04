@@ -3,7 +3,7 @@ import React from 'react';
 const Bottom = ({}) => {
 
     return (
-        <div className="bottom row between">
+        <div className="bottom row between wrap">
             <div className="end-text">
                 &copy; 2018 MIRANDA MORRIS
             </div>
