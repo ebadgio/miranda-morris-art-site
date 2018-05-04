@@ -3102,6 +3102,11 @@ var Deck = function (_React$Component) {
             this.setState({ photos: nextProps.photos, size: nextProps.size });
         }
     }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            clearInterval(intervalId);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this3 = this;

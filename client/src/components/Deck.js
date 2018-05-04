@@ -22,6 +22,10 @@ class Deck extends React.Component{
         this.setState({photos: nextProps.photos, size: nextProps.size});
     }
 
+    componentWillUnmount() {
+        clearInterval(intervalId);
+    }
+
     render() {
         if (this.state.size < 4) {
 
