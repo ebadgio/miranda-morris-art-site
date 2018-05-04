@@ -3111,7 +3111,7 @@ var Deck = function (_React$Component) {
         value: function render() {
             var _this3 = this;
 
-            if (this.state.size < 4) {
+            if (this.state.size < 5) {
 
                 var sendWidth = void 0;
                 var margin = true;

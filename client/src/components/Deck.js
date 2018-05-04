@@ -27,7 +27,7 @@ class Deck extends React.Component{
     }
 
     render() {
-        if (this.state.size < 4) {
+        if (this.state.size < 5) {
 
             let sendWidth;
             let margin = true;
