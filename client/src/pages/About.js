@@ -26,7 +26,7 @@ const About = ({}) => {
                         <br/>
                         <br />
                         At Rice University, her artwork has been featured in several locations,
-                        including the Moody Center for the Ats, Rice Memorial Center, McMurtry College,
+                        including the Moody Center for the Arts, Rice Memorial Center, McMurtry College,
                         Sewall Hall, and Rice Coffeehouse. Her largest piece, McMurtry College,
                         is a permanent gift to her residential college.
                     </div>
