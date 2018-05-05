@@ -6,7 +6,7 @@ import Photo from '../components/Photo';
 import gallery from '../../assets/data';
 import PhotoViewer from "../components/PhotoViewer";
 import Deck from "../components/Deck";
-const items=['PAINTING', 'DRAWING', 'SCULPTURE', 'VIDEO'];
+const items=['PAINTING', 'DRAWING', 'SCULPTURE'];
 
 class Gallery extends React.Component {
 
@@ -38,11 +38,11 @@ class Gallery extends React.Component {
                 this.setState({photos: gallery.sculpture, tab: 'SCULPTURE'});
                 // document.getElementById('photo-cont').style.minHeight = '700px';
                 return;
-            case "VIDEO":
-
-                this.setState({photos: gallery.video, tab: 'VIDEO'});
-                // document.getElementById('photo-cont').style.minHeight = 'none';
-                return;
+            // case "VIDEO":
+            //
+            //     this.setState({photos: gallery.video, tab: 'VIDEO'});
+            //     // document.getElementById('photo-cont').style.minHeight = 'none';
+            //     return;
             default:
 
                 // document.getElementById('photo-cont').style.minHeight = 'none';
