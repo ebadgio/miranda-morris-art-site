@@ -2851,10 +2851,10 @@ var gallery = {
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+and+Marla.jpg"
     }, {
-        title: "Houston Sunset",
-        size: "Acrylic | 2016 | 10” x 8”",
+        title: "YuYuan",
+        size: "Oil Painting | 2017 | 8” x 10”",
         extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
     }, {
         title: "PingJiang Lu",
         size: "Oil Painting | 2017 | 8” x 10”",
@@ -2881,15 +2881,15 @@ var gallery = {
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Gregor.jpeg\n"
     }, {
-        title: "YuYuan",
-        size: "Oil Painting | 2017 | 8” x 10”",
-        extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
-    }, {
         title: "Renaissance Woman",
         size: "Oil Painting | 2014 | 18” x 24”",
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman.jpeg"
+    }, {
+        title: "Houston Sunset",
+        size: "Acrylic | 2016 | 10” x 8”",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
     }, {
         title: "Free Way",
         size: "Acrylic | 2016 | 10” x 8”",

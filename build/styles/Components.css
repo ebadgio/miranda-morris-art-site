@@ -209,15 +209,15 @@
 }
 
 
-@media only screen and (min-height: 800px) {
+/*@media only screen and (min-height: 800px) {*/
 
-    .bottom {
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-    }
+    /*.bottom {*/
+        /*position: absolute;*/
+        /*bottom: 0;*/
+        /*width: 100vw;*/
+    /*}*/
 
-}
+/*}*/
 
 .end-text {
     color: #fff;
