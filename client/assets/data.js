@@ -20,10 +20,10 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+and+Marla.jpg"
         },
         {
-            title: "YuYuan",
-            size: "Oil Painting | 2017 | 8” x 10”",
+            title: "Houston Sunset",
+            size: "Acrylic | 2016 | 10” x 8”",
             extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
         },
         {
             title: "PingJiang Lu",
@@ -44,10 +44,10 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Tiger+Hill.JPG"
         },
         {
-            title: "Renaissance Woman",
-            size: "Oil Painting | 2014 | 18” x 24”",
+            title: "Reconciliation",
+            size: "Acrylic | 2016 | 10” x 8”",
             extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman.jpeg"
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reconciliation.jpg"
         },
         {
             title: "Gregor Samsa",
@@ -56,16 +56,16 @@ const gallery = {
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Gregor.jpeg\n"
         },
         {
-            title: "Houston Sunset",
-            size: "Acrylic | 2016 | 10” x 8”",
+            title: "YuYuan",
+            size: "Oil Painting | 2017 | 8” x 10”",
             extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
         },
         {
-            title: "Reconciliation",
-            size: "Acrylic | 2016 | 10” x 8”",
+            title: "Renaissance Woman",
+            size: "Oil Painting | 2014 | 18” x 24”",
             extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reconciliation.jpg"
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman.jpeg"
         },
         {
             title: "Free Way",
@@ -123,6 +123,18 @@ const gallery = {
             extra: "",
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Study+of+Sargent's+%22Mrs.+Horace+Webber%22.jpeg"
         },
+        {
+            title: "McMurtry Lion",
+            size: "Ink, Watercolor | 2017",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch+Color.JPG"
+        },
+        {
+            title: "McMurtry Lion",
+            size: "Tattoo | 2017",
+            extra: "",
+            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
+        },
     ],
     sculpture: [
         {
@@ -148,26 +160,6 @@ const gallery = {
             size: "Wood | 2017",
             extra: "",
             src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Swiss+Wood+Interior.jpg"
-        },
-    ],
-    tattoo: [
-        {
-            title: "McMurtry Lion",
-            size: "Ink | 2017",
-            extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch.jpg"
-        },
-        {
-            title: "McMurtry Lion",
-            size: "Ink, Watercolor | 2017",
-            extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch+Color.JPG"
-        },
-        {
-            title: "McMurtry Lion",
-            size: "Tattoo | 2017",
-            extra: "",
-            src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
         },
     ],
     video: [

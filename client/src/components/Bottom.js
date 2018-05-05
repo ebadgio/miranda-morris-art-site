@@ -8,7 +8,7 @@ const Bottom = ({}) => {
                 &copy; 2018 MIRANDA MORRIS
             </div>
             <div>
-            <div className="row">
+            <div className="row" style={{marginRight: '10px', marginTop: '10px'}}>
                 <a target="_blank" href="https://www.instagram.com/mirandaxiao_/">
                     <div className="btn solid frame circle transparent" id="insta">
                         <i className="fab fa-instagram" />

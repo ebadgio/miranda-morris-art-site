@@ -6,7 +6,7 @@ import Photo from '../components/Photo';
 import gallery from '../../assets/data';
 import PhotoViewer from "../components/PhotoViewer";
 import Deck from "../components/Deck";
-const items=['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO'];
+const items=['PAINTING', 'DRAWING', 'SCULPTURE', 'VIDEO'];
 
 class Gallery extends React.Component {
 
@@ -36,11 +36,6 @@ class Gallery extends React.Component {
             case "SCULPTURE":
 
                 this.setState({photos: gallery.sculpture, tab: 'SCULPTURE'});
-                // document.getElementById('photo-cont').style.minHeight = '700px';
-                return;
-            case "TATTOO DESIGN":
-
-                this.setState({photos: gallery.tattoo, tab: 'TATTOO DESIGN'});
                 // document.getElementById('photo-cont').style.minHeight = '700px';
                 return;
             case "VIDEO":

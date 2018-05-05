@@ -13,10 +13,6 @@ const Contact = ({}) => {
                             <span className="contact-header-sub">Email: </span>
                             <a style={{color: '#3d5afe'}} href="mailto:mirandaxmorris@gmail.com">mirandaxmorris@gmail.com</a>
                         </div>
-                        <div>
-                            <span className="contact-header-sub">Instagram: </span>
-                            <a target="_blank" style={{color: '#3d5afe'}} href="https://www.instagram.com/mirandaxiao_/">@mirandaxiao</a>
-                        </div>
                     </div>
                     <div>
                     </div>

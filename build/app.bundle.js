@@ -2851,10 +2851,10 @@ var gallery = {
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+and+Marla.jpg"
     }, {
-        title: "YuYuan",
-        size: "Oil Painting | 2017 | 8” x 10”",
+        title: "Houston Sunset",
+        size: "Acrylic | 2016 | 10” x 8”",
         extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
     }, {
         title: "PingJiang Lu",
         size: "Oil Painting | 2017 | 8” x 10”",
@@ -2871,25 +2871,25 @@ var gallery = {
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Tiger+Hill.JPG"
     }, {
-        title: "Renaissance Woman",
-        size: "Oil Painting | 2014 | 18” x 24”",
+        title: "Reconciliation",
+        size: "Acrylic | 2016 | 10” x 8”",
         extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman.jpeg"
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reconciliation.jpg"
     }, {
         title: "Gregor Samsa",
         size: "Oil Painting | 2014 | 16” x 12” ",
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Gregor.jpeg\n"
     }, {
-        title: "Houston Sunset",
-        size: "Acrylic | 2016 | 10” x 8”",
+        title: "YuYuan",
+        size: "Oil Painting | 2017 | 8” x 10”",
         extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Houston+Sunset.jpg"
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Yuyuan.jpeg\n"
     }, {
-        title: "Reconciliation",
-        size: "Acrylic | 2016 | 10” x 8”",
+        title: "Renaissance Woman",
+        size: "Oil Painting | 2014 | 18” x 24”",
         extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Reconciliation.jpg"
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Renaissance+Woman.jpeg"
     }, {
         title: "Free Way",
         size: "Acrylic | 2016 | 10” x 8”",
@@ -2936,6 +2936,16 @@ var gallery = {
         size: "Charcoal | 2015 | 11” x 14”",
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Study+of+Sargent's+%22Mrs.+Horace+Webber%22.jpeg"
+    }, {
+        title: "McMurtry Lion",
+        size: "Ink, Watercolor | 2017",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch+Color.JPG"
+    }, {
+        title: "McMurtry Lion",
+        size: "Tattoo | 2017",
+        extra: "",
+        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
     }],
     sculpture: [{
         title: "Reprieve",
@@ -2957,22 +2967,6 @@ var gallery = {
         size: "Wood | 2017",
         extra: "",
         src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Swiss+Wood+Interior.jpg"
-    }],
-    tattoo: [{
-        title: "McMurtry Lion",
-        size: "Ink | 2017",
-        extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch.jpg"
-    }, {
-        title: "McMurtry Lion",
-        size: "Ink, Watercolor | 2017",
-        extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Lion+Sketch+Color.JPG"
-    }, {
-        title: "McMurtry Lion",
-        size: "Tattoo | 2017",
-        extra: "",
-        src: "https://s3.us-east-2.amazonaws.com/mirandamorrisart/Brad+Blunt+Tattoo.jpeg"
     }],
     video: [{
         title: "WITCH DOCTOR | 2018",
@@ -3035,7 +3029,7 @@ var Bottom = function Bottom(_ref) {
             null,
             _react2.default.createElement(
                 "div",
-                { className: "row" },
+                { className: "row", style: { marginRight: '10px', marginTop: '10px' } },
                 _react2.default.createElement(
                     "a",
                     { target: "_blank", href: "https://www.instagram.com/mirandaxiao_/" },
@@ -3191,7 +3185,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(0, Math.floor(this.state.size / 4)).map(function (photo) {
+                            this.state.photos.slice(0, Math.floor(this.state.size / 4) + 1).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
@@ -3200,7 +3194,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(Math.floor(this.state.size / 4), 2 * Math.floor(this.state.size / 4)).map(function (photo) {
+                            this.state.photos.slice(Math.floor(this.state.size / 4) + 1, 2 * Math.floor(this.state.size / 4) + 2).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
@@ -3209,7 +3203,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col' },
-                            this.state.photos.slice(2 * Math.floor(this.state.size / 4), 3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
+                            this.state.photos.slice(2 * Math.floor(this.state.size / 4) + 2, 3 * Math.floor(this.state.size / 4) + 2).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
@@ -3218,7 +3212,7 @@ var Deck = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'flex-col deck-col', style: { marginRight: 0 } },
-                            this.state.photos.slice(3 * Math.floor(this.state.size / 4) + 1).map(function (photo) {
+                            this.state.photos.slice(3 * Math.floor(this.state.size / 4) + 2).map(function (photo) {
                                 return _react2.default.createElement(_Photo2.default, { image: photo,
                                     selectFunc: _this4.props.selectFunc,
                                     key: photo.src });
@@ -3943,20 +3937,6 @@ var Contact = function Contact(_ref) {
                             { style: { color: '#3d5afe' }, href: "mailto:mirandaxmorris@gmail.com" },
                             "mirandaxmorris@gmail.com"
                         )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            { className: "contact-header-sub" },
-                            "Instagram: "
-                        ),
-                        _react2.default.createElement(
-                            "a",
-                            { target: "_blank", style: { color: '#3d5afe' }, href: "https://www.instagram.com/mirandaxiao_/" },
-                            "@mirandaxiao"
-                        )
                     )
                 ),
                 _react2.default.createElement("div", null)
@@ -4008,7 +3988,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var items = ['PAINTING', 'DRAWING', 'SCULPTURE', 'TATTOO DESIGN', 'VIDEO'];
+var items = ['PAINTING', 'DRAWING', 'SCULPTURE', 'VIDEO'];
 
 var Gallery = function (_React$Component) {
     _inherits(Gallery, _React$Component);
@@ -4045,11 +4025,6 @@ var Gallery = function (_React$Component) {
                 case "SCULPTURE":
 
                     this.setState({ photos: _data2.default.sculpture, tab: 'SCULPTURE' });
-                    // document.getElementById('photo-cont').style.minHeight = '700px';
-                    return;
-                case "TATTOO DESIGN":
-
-                    this.setState({ photos: _data2.default.tattoo, tab: 'TATTOO DESIGN' });
                     // document.getElementById('photo-cont').style.minHeight = '700px';
                     return;
                 case "VIDEO":
