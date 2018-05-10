@@ -10,12 +10,12 @@ const Bottom = ({}) => {
             <div>
             <div className="row" style={{marginRight: '10px', marginTop: '10px'}}>
                 <a target="_blank" href="https://www.instagram.com/mirandaxiao_/">
-                    <div className="btn solid frame circle transparent" id="insta">
+                    <div className="btn solid frame circle" id="insta">
                         <i className="fab fa-instagram" />
                     </div>
                 </a>
                 <a target="_blank" href="https://www.society6.com/mirandaxmorris">
-                    <div className="btn solid circle frame transparent" id="shop">
+                    <div className="btn solid circle frame" id="shop">
                         <i className="fas fa-shopping-bag" />
                     </div>
                 </a>
