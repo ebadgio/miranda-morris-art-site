@@ -22,7 +22,7 @@ const Bottom = ({}) => {
             </div>
             </div>
             <div className="end-text">
-                Site Design By <a target="_blank" href="https://www.github.com/ebadgio">Eli Badgio</a>
+                Site Design By <a target="_blank" href="https://www.elibadgio.com">Eli Badgio</a>
             </div>
         </div>
     );
